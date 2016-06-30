@@ -14,4 +14,7 @@ angular.module('testApp')
       'AngularJS',
       'Karma'
     ];
+    $scope.isActive = function (viewLocation) {
+        return viewLocation === $location.path();
+    };
   });
