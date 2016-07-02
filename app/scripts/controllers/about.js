@@ -2,19 +2,12 @@
 
 /**
  * @ngdoc function
- * @name testApp.controller:AboutCtrl
+ * @name rmwebclientApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the testApp
+ * Controller of the rmwebclientApp
  */
 angular.module('testApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-    $scope.isActive = function (viewLocation) {
-        return viewLocation === $location.path();
-    };
-  });
+  .controller('AboutCtrl',[function () {
+
+}]);

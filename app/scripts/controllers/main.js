@@ -2,16 +2,11 @@
 
 /**
  * @ngdoc function
- * @name testApp.controller:MainCtrl
+ * @name rmwebclientApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the testApp
+ * Controller of the rmwebclientApp
  */
 angular.module('testApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl'[ function () {
+}]);

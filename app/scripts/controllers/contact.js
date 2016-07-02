@@ -2,16 +2,12 @@
 
 /**
  * @ngdoc function
- * @name testApp.controller:ContactCtrl
+ * @name rmwebclientApp.controller:ContactCtrl
  * @description
  * # ContactCtrl
- * Controller of the testApp
+ * Controller of the rmwebclientApp
  */
 angular.module('testApp')
-  .controller('ContactCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('ContactCtrl',[function ( ) {
+
+}]);
