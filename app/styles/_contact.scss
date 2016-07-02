@@ -1,0 +1,14 @@
+.contact-block{
+  .form-group{
+    position: relative;
+    .error{
+      margin: 10px 0px;
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+      .bg-danger{
+        padding: 5px 10px;
+      }
+    }
+  }
+}

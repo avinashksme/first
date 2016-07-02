@@ -6,25 +6,42 @@
   </div>
   <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
-      <form novalidate>
-        <div class="form-group">
-          <label>Name</label>
-          <input type="text" class="form-control" placeholder="Name*" required>
-        </div>
-        <div class="form-group">
-          <label>Email address</label>
-          <input type="email" class="form-control" placeholder="Email*" required>
-        </div>
-        <div class="form-group">
-          <label>Phone</label>
-          <input type="tel" class="form-control" placeholder="Phone*" required>
-        </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea class="form-control" placeholder="Message*" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      <div class="contact-block">
+        <form name="contact_form" novalidate>
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" placeholder="Name*" name="fName" ng-model="contact.fName" ng-pattern="setting.regex.name" required>
+            <div class="error" ng-show="contact_form.$submitted || contact_form.fName.$touched">
+              <div ng-show="contact_form.fName.$error.required" class="bg-danger">Tell us your name.</div>
+              <div ng-show="contact_form.fName.$error.pattern" class="bg-danger">Invalid Name</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" placeholder="Email*" name="eMail" ng-model="contact.eMail" ng-pattern="setting.regex.email" required>
+            <div class="error" ng-show="contact_form.$submitted || contact_form.eMail.$touched">
+              <div ng-show="contact_form.eMail.$error.required" class="bg-danger">Tell us your Email.</div>
+              <div ng-show="contact_form.eMail.$error.pattern" class="bg-danger">Invalid Email</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" class="form-control" placeholder="Phone*" name="phone" ng-model="contact.phone" ng-pattern="setting.regex.mobile" required>
+            <div class="error" ng-show="contact_form.$submitted || contact_form.phone.$touched">
+              <div ng-show="contact_form.phone.$error.required" class="bg-danger">Tell us your Phone Number.</div>
+              <div ng-show="contact_form.phone.$error.pattern" class="bg-danger">Invalid Phone</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea class="form-control" placeholder="Message*" rows="3" name="message" ng-model="contact.message" required></textarea>
+            <div class="error" ng-show="contact_form.$submitted || contact_form.message.$touched">
+              <div ng-show="contact_form.message.$error.required" class="bg-danger">Why you want to contact us.</div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
       <br/>
     </div>
   </div>

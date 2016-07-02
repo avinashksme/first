@@ -8,6 +8,6 @@
  * Controller of the rmwebclientApp
  */
 angular.module('testApp')
-  .controller('ContactCtrl',[function ( ) {
+  .controller('ContactCtrl',['$scope', function ($scope) {
 
 }]);
