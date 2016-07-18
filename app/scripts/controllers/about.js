@@ -71,4 +71,12 @@ angular.module('testApp')
           instagramUrl: 'https://www.instagram.com/avinash.ks/'
       }
     ];
+
+    $scope.open = function(){
+      var modalInstance = $uibModal.open({
+        templateUrl: 'modals/firstmodal.html',
+        controller: 'ModalInstanceCtrl',
+      });
+    };
+
 }]);
